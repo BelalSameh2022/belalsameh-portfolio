@@ -14,6 +14,8 @@ import {
 } from "react-icons/fa";
 
 import { FiSend } from "react-icons/fi";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 export default function Contact() {
   const formRef = useRef();
@@ -21,7 +23,7 @@ export default function Contact() {
 
   const notify = (err) => {
     if (err) {
-      toast.error('Oops, something went wrong. Please try again.', {
+      toast.error("Oops, something went wrong. Please try again.", {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -30,9 +32,8 @@ export default function Contact() {
         draggable: true,
         progress: undefined,
         theme: "light",
-        });
-    }
-    else {
+      });
+    } else {
       toast.success("Message has sent successfully.", {
         position: "top-right",
         autoClose: 2000,
@@ -44,7 +45,7 @@ export default function Contact() {
         theme: "light",
       });
     }
-  }
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -59,12 +60,38 @@ export default function Contact() {
       .then(
         (result) => {
           setError(false);
+          notify(error);
         },
-        (error) => {
+        (err) => {
           setError(true);
+          notify(error);
         }
       );
   };
+
+  function sendMessage(value) {
+    console.log(value);
+  }
+
+  const validationSchema = Yup.object({
+    name: Yup.string().required("Name is required").min(3, "Minimum length is 3").max(20, "Minimum length is 3"),
+    email: Yup.string()
+      .required("Email is required")
+      .email("Enter a valid email"),
+    subject: Yup.string().required("Subject is required"),
+    message: Yup.string().required("Message is required"),
+  });
+
+  const contactFormik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: ""
+    },
+    // validationSchema,
+    onSubmit: sendMessage
+  });
 
   return (
     <section className="contact section">
@@ -117,7 +144,11 @@ export default function Contact() {
           </div>
         </div>
 
-        <form className="contact__form" ref={formRef} onSubmit={sendEmail}>
+        <form
+          className="contact__form"
+          ref={formRef}
+          onSubmit={contactFormik.handleSubmit}
+        >
           <div className="form__input-group">
             <div className="form__input-div">
               <input
@@ -125,6 +156,8 @@ export default function Contact() {
                 placeholder="Name..."
                 className="form-control"
                 name="name"
+                onChange={contactFormik.handleChange}
+                onBlur={contactFormik.handleBlur}
               />
             </div>
             <div className="form__input-div">
@@ -133,6 +166,8 @@ export default function Contact() {
                 placeholder="Email..."
                 className="form-control"
                 name="email"
+                onChange={contactFormik.handleChange}
+                onBlur={contactFormik.handleBlur}
               />
             </div>
             <div className="form__input-div">
@@ -141,6 +176,8 @@ export default function Contact() {
                 placeholder="Subject..."
                 className="form-control"
                 name="subject"
+                onChange={contactFormik.handleChange}
+                onBlur={contactFormik.handleBlur}
               />
             </div>
           </div>
@@ -150,10 +187,12 @@ export default function Contact() {
               placeholder="Message..."
               className="form-control textarea"
               name="message"
+              onChange={contactFormik.handleChange}
+              onBlur={contactFormik.handleBlur}
             ></textarea>
           </div>
 
-          <button className="button" onClick={() => notify(error)}>
+          <button className="button">
             Send message
             <span className="button__icon contact__button-icon">
               <FiSend />

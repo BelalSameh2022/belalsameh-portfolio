@@ -220,6 +220,13 @@
     grid-template-columns: 1fr;
   }
 
+  .modal__list {
+    grid-template-areas:
+      "project"
+      "language"
+      "demo";
+  }
+
   .modal__img {
     height: 300px;
   }
@@ -231,11 +238,11 @@
   }
 
   .style__switcher-toggler {
-    top: 15%;
+    top: 19%;
   }
 
   .theme__toggler {
-    bottom: 15%;
+    bottom: 19%;
   }
 
   .style__switcher-close {

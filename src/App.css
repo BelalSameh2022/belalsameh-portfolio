@@ -12,6 +12,7 @@
   --container-color: hsl(0, 0%, 93%);
   --border-color: hsl(0, 0%, 87%);
   --text-white: #fff;
+  --thumb-color: #ccc;
 
   /* ========= Fonts & Typography ========= */
   --body-font: 'Open Sans', sans-serif;
@@ -42,6 +43,7 @@
   --body-color: hsl(0, 0%, 7%);
   --container-color: hsl(0, 1%, 17%);
   --border-color: hsl(0, 0%, 15%);
+  --thumb-color: #333;
 }
 
 
@@ -58,6 +60,32 @@
     --smaller-font-size: 13px;
     --tiny-font-size: 11px;
   }
+}
+
+/* =========== Scroll-bar =========== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--container-color);
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--thumb-color);
+  border-radius: 25px;
+  transition: all 0.75s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--first-color);
+}
+
+/* =========== Selection =========== */
+::selection {
+  color: #fff;
+  background-color: var(--first-color);
 }
 
 

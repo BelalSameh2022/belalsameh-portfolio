@@ -6,6 +6,12 @@
     align-items: flex-start;
 }
 
+@media screen and (min-width: 1024px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
+
 .info__list {
     row-gap: 20px;
     margin-bottom: 32px;

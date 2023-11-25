@@ -9,24 +9,15 @@ import {
 } from 'react-icons/fa';
 import { FiFileText, FiUser, FiExternalLink } from 'react-icons/fi';
 
-import Work1 from './assets/project-1.jpeg';
-import Work2 from './assets/project-2.jpg';
-import Work3 from './assets/project-3.jpeg';
-import Work4 from './assets/project-4.jpeg';
+import Work1 from './assets/portfolio.jpg';
+import Work2 from './assets/note-app-1.jpg';
+import Work3 from './assets/calculator.PNG';
+import Work4 from './assets/yummy.jpg';
 import Work5 from './assets/project-5.jpg';
 import Work6 from './assets/project-6.jpg';
 
-// import Theme1 from './assets/purple.png';
-// import Theme2 from './assets/red.png';
-// import Theme3 from './assets/blueviolet.png';
-// import Theme4 from './assets/blue.png';
-// import Theme5 from './assets/goldenrod.png';
-// import Theme6 from './assets/magenta.png';
-// import Theme7 from './assets/yellowgreen.png';
-// import Theme8 from './assets/orange.png';
-// import Theme9 from './assets/green.png';
-// import Theme10 from './assets/yellow.png';
 
+//  ===============> Links <===============
 export const links = [
   {
     id: 1,
@@ -57,6 +48,7 @@ export const links = [
   },
 ];
 
+//  ===============> Personal Information <===============
 export const personalInfo = [
   {
     id: 1,
@@ -107,6 +99,7 @@ export const personalInfo = [
   }
 ];
 
+//  ===============> States <===============
 export const stats = [
   {
     id: 1,
@@ -133,6 +126,7 @@ export const stats = [
   // },
 ];
 
+//  ===============> Resume <===============
 export const resume = [
   // {
   //   id: 1,
@@ -189,6 +183,7 @@ export const resume = [
   },
 ];
 
+//  ===============> Skills <===============
 export const skills = [
   {
     id: 1,
@@ -246,38 +241,80 @@ export const skills = [
 
 ];
 
+//  ===============> Portfolio <===============
 export const portfolio = [
   {
     id: 1,
     img: Work1,
-    title: 'Photo Editing',
+    title: 'Landing Page',
     details: [
       {
         icon: <FiFileText />,
         title: 'Project: ',
-        desc: 'Photo',
-      },
-      {
-        icon: <FiUser />,
-        title: 'Client: ',
-        desc: 'Dribble',
+        desc: 'Portfolio',
       },
       {
         icon: <FaCode />,
         title: 'Language: ',
-        desc: 'Adobe Photoshop',
+        desc: 'ReactJS',
       },
       {
         icon: <FiExternalLink />,
-        title: 'Preview: ',
-        desc: 'www.dribble.com',
+        title: 'Demo: ',
+        desc: 'react-js-portfolio-omega.vercel.app',
+      },
+    ],
+  },
+  
+  {
+    id: 2,
+    img: Work2,
+    title: 'Web Application',
+    details: [
+      {
+        icon: <FiFileText />,
+        title: 'Project: ',
+        desc: 'Notes App',
+      },
+      {
+        icon: <FaCode />,
+        title: 'Language: ',
+        desc: 'HTML, CSS and JS',
+      },
+      {
+        icon: <FiExternalLink />,
+        title: 'Demo: ',
+        desc: 'notes-app-1-1.vercel.app'
       },
     ],
   },
 
   {
-    id: 2,
-    img: Work2,
+    id: 3,
+    img: Work3,
+    title: 'Web Application',
+    details: [
+      {
+        icon: <FiFileText />,
+        title: 'Project: ',
+        desc: 'Calculator',
+      },
+      {
+        icon: <FaCode />,
+        title: 'Language: ',
+        desc: 'HTML, CSS and JS',
+      },
+      {
+        icon: <FiExternalLink />,
+        title: 'Demo: ',
+        desc: 'calculator-nu-indol-53.vercel.app'
+      },
+    ],
+  },
+
+  {
+    id: 4,
+    img: Work4,
     title: 'Website Design',
     details: [
       {
@@ -286,196 +323,184 @@ export const portfolio = [
         desc: 'Website',
       },
       {
-        icon: <FiUser />,
-        title: 'Client: ',
-        desc: 'Dribble',
-      },
-      {
         icon: <FaCode />,
         title: 'Language: ',
-        desc: 'React JS',
+        desc: 'JQuery, Bootstrap',
       },
       {
         icon: <FiExternalLink />,
-        title: 'Preview: ',
-        desc: 'www.dribble.com',
+        title: 'Demo: ',
+        desc: 'yummy-sable.vercel.app'
       },
     ],
   },
 
-  {
-    id: 3,
-    img: Work3,
-    title: 'Video Editing',
-    details: [
-      {
-        icon: <FiFileText />,
-        title: 'Project: ',
-        desc: 'Video',
-      },
-      {
-        icon: <FiUser />,
-        title: 'Client: ',
-        desc: 'Dribble',
-      },
-      {
-        icon: <FaCode />,
-        title: 'Language: ',
-        desc: 'Adobe Premium',
-      },
-      {
-        icon: <FiExternalLink />,
-        title: 'Preview: ',
-        desc: 'www.dribble.com',
-      },
-    ],
-  },
+  // {
+  //   id: 1,
+  //   img: Work1,
+  //   title: 'Photo Editing',
+  //   details: [
+  //     {
+  //       icon: <FiFileText />,
+  //       title: 'Project: ',
+  //       desc: 'Photo',
+  //     },
+  //     {
+  //       icon: <FiUser />,
+  //       title: 'Client: ',
+  //       desc: 'Dribble',
+  //     },
+  //     {
+  //       icon: <FaCode />,
+  //       title: 'Language: ',
+  //       desc: 'Adobe Photoshop',
+  //     },
+  //     {
+  //       icon: <FiExternalLink />,
+  //       title: 'Preview: ',
+  //       desc: 'www.dribble.com',
+  //     },
+  //   ],
+  // },
 
-  {
-    id: 4,
-    img: Work4,
-    title: 'Video Editing',
-    details: [
-      {
-        icon: <FiFileText />,
-        title: 'Project: ',
-        desc: 'Video',
-      },
-      {
-        icon: <FiUser />,
-        title: 'Client: ',
-        desc: 'Dribble',
-      },
-      {
-        icon: <FaCode />,
-        title: 'Language: ',
-        desc: 'Adobe Premium',
-      },
-      {
-        icon: <FiExternalLink />,
-        title: 'Preview: ',
-        desc: 'www.dribble.com',
-      },
-    ],
-  },
+  // {
+  //   id: 2,
+  //   img: Work2,
+  //   title: 'Website Design',
+  //   details: [
+  //     {
+  //       icon: <FiFileText />,
+  //       title: 'Project: ',
+  //       desc: 'Website',
+  //     },
+  //     {
+  //       icon: <FiUser />,
+  //       title: 'Client: ',
+  //       desc: 'Dribble',
+  //     },
+  //     {
+  //       icon: <FaCode />,
+  //       title: 'Language: ',
+  //       desc: 'React JS',
+  //     },
+  //     {
+  //       icon: <FiExternalLink />,
+  //       title: 'Preview: ',
+  //       desc: 'www.dribble.com',
+  //     },
+  //   ],
+  // },
 
-  {
-    id: 5,
-    img: Work5,
-    title: 'Landing Page',
-    details: [
-      {
-        title: 'Project: ',
-        desc: 'Website',
-      },
-      {
-        title: 'Client: ',
-        desc: 'Dribble',
-      },
-      {
-        title: 'Language: ',
-        desc: 'React JS, Node JS',
-      },
-      {
-        title: 'Preview: ',
-        desc: 'www.dribble.com',
-      },
-    ],
-  },
+  // {
+  //   id: 3,
+  //   img: Work3,
+  //   title: 'Video Editing',
+  //   details: [
+  //     {
+  //       icon: <FiFileText />,
+  //       title: 'Project: ',
+  //       desc: 'Video',
+  //     },
+  //     {
+  //       icon: <FiUser />,
+  //       title: 'Client: ',
+  //       desc: 'Dribble',
+  //     },
+  //     {
+  //       icon: <FaCode />,
+  //       title: 'Language: ',
+  //       desc: 'Adobe Premium',
+  //     },
+  //     {
+  //       icon: <FiExternalLink />,
+  //       title: 'Preview: ',
+  //       desc: 'www.dribble.com',
+  //     },
+  //   ],
+  // },
 
-  {
-    id: 6,
-    img: Work6,
-    title: 'Photo Editing',
-    details: [
-      {
-        icon: <FiFileText />,
-        title: 'Project: ',
-        desc: 'Photo',
-      },
-      {
-        icon: <FiUser />,
-        title: 'Client: ',
-        desc: 'Dribble',
-      },
-      {
-        icon: <FaCode />,
-        title: 'Language: ',
-        desc: 'Adobe Photoshop',
-      },
-      {
-        icon: <FiExternalLink />,
-        title: 'Preview: ',
-        desc: 'www.dibble.com',
-      },
-    ],
-  },
+  // {
+  //   id: 4,
+  //   img: Work4,
+  //   title: 'Video Editing',
+  //   details: [
+  //     {
+  //       icon: <FiFileText />,
+  //       title: 'Project: ',
+  //       desc: 'Video',
+  //     },
+  //     {
+  //       icon: <FiUser />,
+  //       title: 'Client: ',
+  //       desc: 'Dribble',
+  //     },
+  //     {
+  //       icon: <FaCode />,
+  //       title: 'Language: ',
+  //       desc: 'Adobe Premium',
+  //     },
+  //     {
+  //       icon: <FiExternalLink />,
+  //       title: 'Preview: ',
+  //       desc: 'www.dribble.com',
+  //     },
+  //   ],
+  // },
+
+  // {
+  //   id: 5,
+  //   img: Work5,
+  //   title: 'Landing Page',
+  //   details: [
+  //     {
+  //       title: 'Project: ',
+  //       desc: 'Website',
+  //     },
+  //     {
+  //       title: 'Client: ',
+  //       desc: 'Dribble',
+  //     },
+  //     {
+  //       title: 'Language: ',
+  //       desc: 'React JS, Node JS',
+  //     },
+  //     {
+  //       title: 'Preview: ',
+  //       desc: 'www.dribble.com',
+  //     },
+  //   ],
+  // },
+
+  // {
+  //   id: 6,
+  //   img: Work6,
+  //   title: 'Photo Editing',
+  //   details: [
+  //     {
+  //       icon: <FiFileText />,
+  //       title: 'Project: ',
+  //       desc: 'Photo',
+  //     },
+  //     {
+  //       icon: <FiUser />,
+  //       title: 'Client: ',
+  //       desc: 'Dribble',
+  //     },
+  //     {
+  //       icon: <FaCode />,
+  //       title: 'Language: ',
+  //       desc: 'Adobe Photoshop',
+  //     },
+  //     {
+  //       icon: <FiExternalLink />,
+  //       title: 'Preview: ',
+  //       desc: 'www.dibble.com',
+  //     },
+  //   ],
+  // },
 ];
 
-// export const themes = [
-//   {
-//     id: 1,
-//     img: Theme1,
-//     color: 'hsl(252, 35%, 51%)',
-//   },
-
-//   {
-//     id: 2,
-//     img: Theme4,
-//     color: 'hsl(225, 73%, 57%)',
-//   },
-
-//   {
-//     id: 3,
-//     img: Theme9,
-//     color: 'hsl(88, 65%, 43%)',
-//   },
-
-//   {
-//     id: 4,
-//     img: Theme7,
-//     color: 'hsl(80, 61%, 50%)',
-//   },
-
-
-//   // {
-//   //   id: 3,
-//   //   img: Theme3,
-//   //   color: 'hsl(271, 76%, 53%)',
-//   // },
-
-//   {
-//     id: 5,
-//     img: Theme5,
-//     color: 'hsl(43, 74%, 49%)',
-//   },
-
-//   {
-//     id: 8,
-//     img: Theme8,
-//     color: 'hsl(19, 96%, 52%)',
-//   },
-
-//   {
-//     id: 6,
-//     img: Theme6,
-//     color: 'hsl(339, 81%, 66%)',
-//   },
-
-//   {
-//     id: 4,
-//     img: Theme2,
-//     color: 'hsl(4, 83%, 50%)',
-//   },
-
-
-//   // {
-//   //   id: 10,
-//   //   img: Theme10,
-//   //   color: 'hsl(42, 100%, 50%)',
-//   // },
-// ];
-
+//  ===============> Themes <===============
 export const themes = [
   {
     id: 1,
