@@ -1,6 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, } from "react";
 import emailjs from "@emailjs/browser";
-import "react-toastify/dist/ReactToastify.css";
 import "./contact.css";
 
 import {
@@ -12,6 +11,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 
+
 import { FiSend } from "react-icons/fi";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -19,10 +19,8 @@ import * as Yup from "yup";
 export default function Contact() {
   const formRef = useRef();
   const [alert, setAlert] = useState(null);
-  const [loading, setLoading] = useState(false);
 
   function sendEmail() {
-    setLoading(true);
     emailjs
       .sendForm(
         "service_1j7p8yu",
@@ -34,7 +32,6 @@ export default function Contact() {
         (result) => {
           console.log(result.text);
           setAlert("Message has sent successfully.");
-          setLoading(false);
         },
         (error) => {
           console.log(error.text);

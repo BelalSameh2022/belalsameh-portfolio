@@ -10,10 +10,10 @@ import {
 import { FiFileText, FiUser, FiExternalLink } from 'react-icons/fi';
 
 import Work1 from './assets/portfolio.jpg';
-import Work2 from './assets/note-app-1.jpg';
-import Work3 from './assets/calculator.PNG';
+import Work2 from './assets/fresh-cart.jpg';
+import Work3 from './assets/note-app-1.jpg';
 import Work4 from './assets/yummy.jpg';
-import Work5 from './assets/project-5.jpg';
+import Work5 from './assets/calculator.PNG';
 import Work6 from './assets/project-6.jpg';
 
 
@@ -269,6 +269,29 @@ export const portfolio = [
   {
     id: 2,
     img: Work2,
+    title: 'Website Design',
+    details: [
+      {
+        icon: <FiFileText />,
+        title: 'Project: ',
+        desc: 'E-commerce',
+      },
+      {
+        icon: <FaCode />,
+        title: 'Language: ',
+        desc: 'HTML, CSS and JS',
+      },
+      {
+        icon: <FiExternalLink />,
+        title: 'Demo: ',
+        desc: 'fresh-cart-eight.vercel.app'
+      },
+    ],
+  },
+
+  {
+    id: 3,
+    img: Work3,
     title: 'Web Application',
     details: [
       {
@@ -285,29 +308,6 @@ export const portfolio = [
         icon: <FiExternalLink />,
         title: 'Demo: ',
         desc: 'notes-app-1-1.vercel.app'
-      },
-    ],
-  },
-
-  {
-    id: 3,
-    img: Work3,
-    title: 'Web Application',
-    details: [
-      {
-        icon: <FiFileText />,
-        title: 'Project: ',
-        desc: 'Calculator',
-      },
-      {
-        icon: <FaCode />,
-        title: 'Language: ',
-        desc: 'HTML, CSS and JS',
-      },
-      {
-        icon: <FiExternalLink />,
-        title: 'Demo: ',
-        desc: 'calculator-nu-indol-53.vercel.app'
       },
     ],
   },
@@ -331,6 +331,29 @@ export const portfolio = [
         icon: <FiExternalLink />,
         title: 'Demo: ',
         desc: 'yummy-sable.vercel.app'
+      },
+    ],
+  },
+
+  {
+    id: 5,
+    img: Work5,
+    title: 'Web Application',
+    details: [
+      {
+        icon: <FiFileText />,
+        title: 'Project: ',
+        desc: 'Calculator',
+      },
+      {
+        icon: <FaCode />,
+        title: 'Language: ',
+        desc: 'HTML, CSS and JS',
+      },
+      {
+        icon: <FiExternalLink />,
+        title: 'Demo: ',
+        desc: 'calculator-nu-indol-53.vercel.app'
       },
     ],
   },
