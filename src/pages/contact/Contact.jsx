@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./contact.css";
 
@@ -19,37 +18,11 @@ import * as Yup from "yup";
 
 export default function Contact() {
   const formRef = useRef();
-  const [error, setError] = useState(false);
+  const [alert, setAlert] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  const notify = (err) => {
-    if (err) {
-      toast.error("Oops, something went wrong. Please try again.", {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    } else {
-      toast.success("Message has sent successfully.", {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    }
-  };
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
+  function sendEmail() {
+    setLoading(true);
     emailjs
       .sendForm(
         "service_1j7p8yu",
@@ -59,25 +32,25 @@ export default function Contact() {
       )
       .then(
         (result) => {
-          setError(false);
-          notify(error);
+          console.log(result.text);
+          setAlert("Message has sent successfully.");
+          setLoading(false);
         },
-        (err) => {
-          setError(true);
-          notify(error);
+        (error) => {
+          console.log(error.text);
+          setAlert("Oops, something went wrong. Please try again.");
         }
       );
-  };
-
-  function sendMessage(value) {
-    console.log(value);
   }
 
   const validationSchema = Yup.object({
-    name: Yup.string().required("Name is required").min(3, "Minimum length is 3").max(20, "Minimum length is 3"),
+    name: Yup.string()
+      .required("Name is required")
+      .min(3, "Minimum length is 3")
+      .max(20, "Maximum length is 20"),
     email: Yup.string()
       .required("Email is required")
-      .email("Enter a valid email"),
+      .email("Invalid email address"),
     subject: Yup.string().required("Subject is required"),
     message: Yup.string().required("Message is required"),
   });
@@ -87,10 +60,10 @@ export default function Contact() {
       name: "",
       email: "",
       subject: "",
-      message: ""
+      message: "",
     },
-    // validationSchema,
-    onSubmit: sendMessage
+    validationSchema,
+    onSubmit: sendEmail,
   });
 
   return (
@@ -149,6 +122,7 @@ export default function Contact() {
           ref={formRef}
           onSubmit={contactFormik.handleSubmit}
         >
+          {alert ? <div className="alert">{alert}</div> : ""}
           <div className="form__input-group">
             <div className="form__input-div">
               <input
@@ -159,6 +133,11 @@ export default function Contact() {
                 onChange={contactFormik.handleChange}
                 onBlur={contactFormik.handleBlur}
               />
+              {contactFormik.errors.name && contactFormik.touched.name ? (
+                <p className="text-alert">{contactFormik.errors.name}</p>
+              ) : (
+                ""
+              )}
             </div>
             <div className="form__input-div">
               <input
@@ -169,6 +148,11 @@ export default function Contact() {
                 onChange={contactFormik.handleChange}
                 onBlur={contactFormik.handleBlur}
               />
+              {contactFormik.errors.email && contactFormik.touched.email ? (
+                <p className="text-alert">{contactFormik.errors.email}</p>
+              ) : (
+                ""
+              )}
             </div>
             <div className="form__input-div">
               <input
@@ -179,6 +163,11 @@ export default function Contact() {
                 onChange={contactFormik.handleChange}
                 onBlur={contactFormik.handleBlur}
               />
+              {contactFormik.errors.subject && contactFormik.touched.subject ? (
+                <p className="text-alert">{contactFormik.errors.subject}</p>
+              ) : (
+                ""
+              )}
             </div>
           </div>
 
@@ -190,15 +179,23 @@ export default function Contact() {
               onChange={contactFormik.handleChange}
               onBlur={contactFormik.handleBlur}
             ></textarea>
+            {contactFormik.errors.message && contactFormik.touched.message ? (
+              <p className="text-alert">{contactFormik.errors.message}</p>
+            ) : (
+              ""
+            )}
           </div>
 
-          <button className="button">
+          <button
+            disabled={!(contactFormik.dirty && contactFormik.isValid)}
+            type="submit"
+            className="button"
+          >
             Send message
             <span className="button__icon contact__button-icon">
               <FiSend />
             </span>
           </button>
-          <ToastContainer />
         </form>
       </div>
     </section>
