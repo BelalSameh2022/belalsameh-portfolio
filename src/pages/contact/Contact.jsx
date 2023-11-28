@@ -59,7 +59,7 @@ export default function Contact() {
       .matches(/^[a-zA-Z\s]+$/, "Only letters and spaces."),
     message: Yup.string()
       .required("Message is required")
-      .min(3, "Minimum length is 20"),
+      .min(20, "Minimum length is 20"),
   });
 
   const contactFormik = useFormik({
