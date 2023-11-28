@@ -56,20 +56,20 @@ export default function About() {
         </h3>
 
         <div className="resume__container grid">
-            <div className="resume__data">
-                {resume.map((value)=>{
-                    if (value.category === 'experience') {
-                        return <ResumeItem key={value.id} {...value} />
-                    }
-                })}
-            </div>
-            <div className="resume__data">
-                {resume.map((value)=>{
-                    if (value.category === 'education') {
-                        return <ResumeItem key={value.id} {...value} />
-                    }
-                })}
-            </div>
+          <div className="resume__data">
+            {resume.map((value) => {
+              if (value.category === "experience") {
+                return <ResumeItem key={value.id} {...value} />;
+              }
+            })}
+          </div>
+          <div className="resume__data">
+            {resume.map((value) => {
+              if (value.category === "education") {
+                return <ResumeItem key={value.id} {...value} />;
+              }
+            })}
+          </div>
         </div>
       </section>
     </main>

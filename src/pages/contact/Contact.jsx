@@ -47,12 +47,19 @@ export default function Contact() {
     name: Yup.string()
       .required("Name is required")
       .min(3, "Minimum length is 3")
-      .max(20, "Maximum length is 20"),
+      .max(20, "Maximum length is 20")
+      .matches(/^[a-zA-Z\s]+$/, "Only letters and spaces."),
     email: Yup.string()
       .required("Email is required")
       .email("Invalid email address"),
-    subject: Yup.string().required("Subject is required"),
-    message: Yup.string().required("Message is required"),
+    subject: Yup.string()
+      .required("Subject is required")
+      .min(3, "Minimum length is 3")
+      .max(20, "Maximum length is 20")
+      .matches(/^[a-zA-Z\s]+$/, "Only letters and spaces."),
+    message: Yup.string()
+      .required("Message is required")
+      .min(3, "Minimum length is 20"),
   });
 
   const contactFormik = useFormik({
