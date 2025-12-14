@@ -59,7 +59,7 @@ export const personalInfo = [
   {
     id: 2,
     title: 'Age: ',
-    description: '24 years old',
+    description: '26 years old',
   },
 
   {
@@ -71,13 +71,13 @@ export const personalInfo = [
   {
     id: 4,
     title: 'Phone: ',
-    description: '+201006269871',
+    description: '+201554779871',
   },
 
   {
     id: 5,
     title: 'Email: ',
-    description: 'belal.ko3ip@gmail.com',
+    description: 'belalsameh.dev@gmail.com',
   },
 
   {
@@ -109,7 +109,7 @@ export const stats = [
 
   {
     id: 2,
-    no: '15+',
+    no: '30+',
     title: 'Completed <br /> projects',
   },
 
@@ -128,31 +128,30 @@ export const stats = [
 
 //  ===============> Resume <===============
 export const resume = [
-  // {
-  //   id: 1,
-  //   category: 'experience',
-  //   icon: <FaBriefcase />,
-  //   year: '2018 - PRESENT',
-  //   title: 'Web Developer <span> Envato </span>',
-  //   desc: 'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,',
-  // },
-
-  // {
-  //   id: 2,
-  //   category: 'experience',
-  //   icon: <FaBriefcase />,
-  //   year: '2013 - 2018',
-  //   title: 'UI/UX Designer <span> Themeforest </span>',
-  //   desc: 'Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt',
-  // },
+  {
+    id: 1,
+    category: 'experience',
+    icon: <FaBriefcase />,
+    year: 'Oct 2024 - Oct 2025',
+    title: 'Technical Support <span> Telecom Egypt </span>',
+    desc: 'Supporting and providing technical services to customers.',
+  },
+  {
+    id: 2,
+    category: 'experience',
+    icon: <FaBriefcase />,
+    year: 'Apr 2024 - Sep 2024',
+    title: 'Training <span> Route Academy </span>',
+    desc: 'Back-end Development Diploma with NodeJS.',
+  },
 
   {
     id: 3,
     category: 'experience',
     icon: <FaBriefcase />,
     year: 'May 2023 - Nov 2023',
-    title: 'Internship <span> Route Academy </span>',
-    desc: 'Full Front-end Development Diploma with ReactJS Framework.',
+    title: 'Training <span> Route Academy </span>',
+    desc: 'Front-end Development Diploma with ReactJS.',
   },
 
   // {
@@ -164,20 +163,29 @@ export const resume = [
   //   desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore',
   // },
 
-  // {
-  //   id: 5,
-  //   category: 'education',
-  //   icon: <FaGraduationCap />,
-  //   year: '2012',
-  //   title: 'Master Degree <span> KIEV University </span>',
-  //   desc: 'Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt',
-  // },
+  {
+    id: 4,
+    category: 'education',
+    icon: <FaGraduationCap />,
+    year: 'Feb 2023 - Apr 2024',
+    title: 'Course <span> American Egyption Academy </span>',
+    desc: 'B2 Certificate in English.',
+  },
+
+  {
+    id: 5,
+    category: 'education',
+    icon: <FaGraduationCap />,
+    year: 'Aug 2021 - Oct 2021',
+    title: 'Course <span> Udemy </span>',
+    desc: `HTML, CSS and JS Tutorial and Projects Course.`,
+  },
 
   {
     id: 6,
     category: 'education',
     icon: <FaGraduationCap />,
-    year: '2018 - 2022',
+    year: 'Sep 2018 - Aug 2022',
     title: 'Bachelor Degree <span> Al-Azhar University </span>',
     desc: 'Computers & Systems Department, Faculty of Engineering.',
   },
@@ -190,54 +198,77 @@ export const skills = [
     title: 'HTML',
     percentage: '25',
   },
-
   {
     id: 2,
     title: 'CSS',
     percentage: '89',
   },
-
   {
     id: 3,
-    title: 'Bootstarp',
+    title: 'Bootstrap',
     percentage: '45',
   },
-
   {
     id: 4,
     title: 'Javascript',
     percentage: '70',
   },
-
   {
     id: 5,
     title: 'Jquery',
     percentage: '66',
   },
-
   {
     id: 6,
     title: 'SCSS',
     percentage: '95',
   },
-
   {
     id: 7,
     title: 'Typescript',
     percentage: '50',
   },
-
   {
     id: 8,
     title: 'ReactJS',
     percentage: '65',
   },
-
   {
     id: 8,
     title: 'NextJS',
     percentage: '65',
   },
+  {
+    id: 9,
+    title: 'NodeJS',
+    percentage: '50',
+  },
+  {
+    id: 10,
+    title: 'ExpressJS',
+    percentage: '88',
+  },
+  {
+    id: 11,
+    title: 'MongoDB',
+    percentage: '50',
+  },
+  {
+    id: 12,
+    title: 'MySQL',
+    percentage: '50',
+  },
+  {
+    id: 13,
+    title: 'Git/Github',
+    percentage: '70',
+  },
+  {
+    id: 14,
+    title: 'Restful APIs',
+    percentage: '45',
+  },
+
 
 ];
 
